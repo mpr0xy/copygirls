@@ -12,6 +12,9 @@ app.use(function(req, res, next){
 
 app.get('/2/:id', function (req, res) {
   id = Number(req.params.id)
+  if (!id){
+    res.send('')
+  }
   db.all("SELECT url FROM girl_pic where id > ? and id <= ?", [id, id + 2], function(err, row) {
     console.dir(row);
     res.send({
@@ -23,6 +26,9 @@ app.get('/2/:id', function (req, res) {
 
 app.get('/5/:id', function (req, res) {
   id = Number(req.params.id)
+  if (!id){
+    res.send('')
+  }
   db.all("SELECT url FROM girl_pic where id > ? and id <= ?", [id, id + 5], function(err, row) {
     console.dir(row);
     res.send({
