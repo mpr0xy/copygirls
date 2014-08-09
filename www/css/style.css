@@ -1,0 +1,17 @@
+/* Empty. Add your own CSS if you like */
+.box {
+  height: 500px;
+  width: 100%;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow; 
+}
+
+.pink {
+  background-color: red;
+}
