@@ -2,7 +2,7 @@
   <ion-content class="has-header">
     <ion-slide-box id="slide-parent" on-slide-changed="slideHasChanged($index)" show-pager="true" does-continue="true">
       <ion-slide ng-repeat="(_key_, _value_) in urls">
-        <img id="{{ _key_ }}" src="{{ _value_ }}"/>
+        <img class="img-box" id="{{ _key_ }}" src="{{ _value_ }}"/>
       </ion-slide>
     </ion-slide-box>
   </ion-content>
