@@ -10,6 +10,8 @@ app.use(function(req, res, next){
   next();
 });
 
+app.use(express.static(__dirname + '/www'));
+
 app.get('/2/:id', function (req, res) {
   id = Number(req.params.id)
   if (!id){
