@@ -21,10 +21,10 @@ angular.module('starter.controllers', [])
       T0: 'http://img2.ph.126.net/fFmOD9NX2CRaDtnlD6oXPw==/6597418311843311201.jpg'
     }
     window.localStorage['urls'] = JSON.stringify($scope.urls)
+    window.localStorage['urlId'] = 8;
   }
   else{
     $scope.urls = JSON.parse(window.localStorage['urls'])
-    window.localStorage['urlId'] = 8
   }
   BaseUrl_5 = 'http://copygirls.mpr0xy.com:8080/5/'
   BaseUrl_2 = 'http://copygirls.mpr0xy.com:8080/2/'
