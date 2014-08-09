@@ -26,8 +26,8 @@ angular.module('starter.controllers', [])
   else{
     $scope.urls = JSON.parse(window.localStorage['urls'])
   }
-  BaseUrl_5 = 'http://copygirls.mpr0xy.com:8080/5/'
-  BaseUrl_2 = 'http://copygirls.mpr0xy.com:8080/2/'
+  BaseUrl_5 = 'http://115.29.37.205:8080/5/'
+  BaseUrl_2 = 'http://115.29.37.205:8080/2/'
   $scope.flip = false;
   $scope.slideHasChanged = function(index) {
     console.log(index);
@@ -41,7 +41,7 @@ angular.module('starter.controllers', [])
       window.localStorage['urlId'] = Number(window.localStorage['urlId']) + 5
       $scope.flip = true;
     }
-    if (index === 0 && $scope.flip){
+    if (index === 1 && $scope.flip){
       $http.get(BaseUrl_2 + window.localStorage['urlId']).success(function(data){
         for(var key in data){
           $scope.urls[key] = data[key]
