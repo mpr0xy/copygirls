@@ -24,7 +24,7 @@ angular.module('starter.controllers', [])
   }
   else{
     $scope.urls = JSON.parse(window.localStorage['urls'])
-    window.localStorage['urlId']
+    window.localStorage['urlId'] = 8
   }
   BaseUrl_5 = 'http://copygirls.mpr0xy.com:8080/5/'
   BaseUrl_2 = 'http://copygirls.mpr0xy.com:8080/2/'

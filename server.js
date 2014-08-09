@@ -14,7 +14,7 @@ app.use(express.static(__dirname + '/www'));
 
 app.get('/2/:id', function (req, res) {
   id = Number(req.params.id)
-  if (!id){
+  if (id == NaN){
     res.send('')
   }
   db.all("SELECT url FROM girl_pic where id > ? and id <= ?", [id, id + 2], function(err, row) {
@@ -28,7 +28,7 @@ app.get('/2/:id', function (req, res) {
 
 app.get('/5/:id', function (req, res) {
   id = Number(req.params.id)
-  if (!id){
+  if (id == NaN){
     res.send('')
   }
   db.all("SELECT url FROM girl_pic where id > ? and id <= ?", [id, id + 5], function(err, row) {
