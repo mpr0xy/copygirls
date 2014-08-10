@@ -4,11 +4,13 @@
 }
 
 .img-box-rotate {
-  transform: rotate(90deg) scale(1.5,1.5);
-  -ms-transform: rotate(90deg) scale(1.5,1.5);   /* IE 9 */
-  -webkit-transform: rotate(90deg) scale(1.5,1.5); /* Safari and Chrome */
-  -o-transform: rotate(90deg) scale(1.5,1.5);    /* Opera */
-  -moz-transform: rotate(90deg) scale(1.5,1.5);    /* Firefox */
+  transform: scale(1.6,1.6) rotate(90deg);
+  -ms-transform: scale(1.6,1.6) rotate(90deg);   /* IE 9 */
+  -webkit-transform: scale(1.6, 1.6) rotate(90deg); /* Safari and Chrome */
+  -o-transform: scale(1.6,1.6) rotate(90deg);    /* Opera */
+  -moz-transform: scale(1.6,1.6) rotate(90deg);    /* Firefox */
+  height: auto;
+  width: auto;
 }
 
 .blue {
