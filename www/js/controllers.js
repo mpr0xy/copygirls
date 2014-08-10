@@ -67,7 +67,19 @@ angular.module('starter.controllers', [])
       $scope.flip = false; 
       
     }
-    imgClass();
+
+    var img = window.document.getElementById('T' + String(index))
+    if (img.width > img.height){
+      img.className = 'img-box img-box-rotate';
+    }
+    else{
+      img.className = 'img-box'
+    }
+
+    var preImg = window.document.getElementById('T' + String((index + 6) % 7))
+    if (preImg){
+      preImg.className = 'img-box'  
+    }
     // T_index = (index + 1) % 3;
     // var T = document.getElementById('T' + String(T_index));
     // T.src = 'http://a.hiphotos.baidu.com/image/w%3D2048/sign=0572060839f33a879e6d071af2641038/55e736d12f2eb9384b1bffcad6628535e5dd6f90.jpg'
