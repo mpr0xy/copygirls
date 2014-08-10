@@ -6,7 +6,7 @@
 .img-box-rotate {
   transform: scale(1.6,1.6) rotate(90deg);
   -ms-transform: scale(1.6,1.6) rotate(90deg);   /* IE 9 */
-  -webkit-transform: scale(1.6, 1.6) rotate(90deg); /* Safari and Chrome */
+  -webkit-transform: scale(1.48, 1.6) rotate(90deg); /* Safari and Chrome */
   -o-transform: scale(1.6,1.6) rotate(90deg);    /* Opera */
   -moz-transform: scale(1.6,1.6) rotate(90deg);    /* Firefox */
   /*height: 400px;*/
