@@ -4,11 +4,11 @@
 }
 
 .img-box-rotate {
-  transform: rotate(90deg) scale(2,1.8);
-  -ms-transform: rotate(90deg) scale(2,1.8);   /* IE 9 */
-  -webkit-transform: rotate(90deg) scale(2,1.8); /* Safari and Chrome */
-  -o-transform: rotate(90deg) scale(2,1.8);    /* Opera */
-  -moz-transform: rotate(90deg) scale(2,1.8);    /* Firefox */
+  transform: rotate(90deg) scale(2,1.6);
+  -ms-transform: rotate(90deg) scale(2,1.6);   /* IE 9 */
+  -webkit-transform: rotate(90deg) scale(2,1.6); /* Safari and Chrome */
+  -o-transform: rotate(90deg) scale(2,1.6);    /* Opera */
+  -moz-transform: rotate(90deg) scale(2,1.6);    /* Firefox */
 }
 
 .blue {
