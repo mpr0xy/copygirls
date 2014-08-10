@@ -33,11 +33,11 @@ angular.module('starter.controllers', [])
       T6: 'http://img2.ph.126.net/ej73pEtClbFaYJYrvvYzoA==/1872090070203215486.jpg',
       T0: 'http://img2.ph.126.net/fFmOD9NX2CRaDtnlD6oXPw==/6597418311843311201.jpg'
     }
-    window.localStorage['urls'] = JSON.stringify($scope.urls)
-    window.localStorage['urlId'] = 8;
+    window.localStorage['urls'] = angular.toJson($scope.urls)
+    window.localStorage['urlId'] = '8';
   }
   else{
-    $scope.urls = JSON.parse(window.localStorage['urls'])
+    $scope.urls = angular.fromJson(window.localStorage['urls'])
   }
   BaseUrl_5 = 'http://115.29.37.205:8080/5/'
   BaseUrl_2 = 'http://115.29.37.205:8080/2/'
@@ -49,7 +49,7 @@ angular.module('starter.controllers', [])
       $http.get(BaseUrl_5 + window.localStorage['urlId']).success(function(data){
         for(var key in data){
           $scope.urls[key] = data[key]
-          window.localStorage['urls'] = JSON.stringify($scope.urls)
+          window.localStorage['urls'] = angular.toJson($scope.urls)
         }
       });
       window.localStorage['urlId'] = Number(window.localStorage['urlId']) + 5
@@ -60,7 +60,7 @@ angular.module('starter.controllers', [])
       $http.get(BaseUrl_2 + window.localStorage['urlId']).success(function(data){
         for(var key in data){
           $scope.urls[key] = data[key]
-          window.localStorage['urls'] = JSON.stringify($scope.urls)
+          window.localStorage['urls'] = angular.toJson($scope.urls)
         }
       });
       window.localStorage['urlId'] = Number(window.localStorage['urlId']) + 2
