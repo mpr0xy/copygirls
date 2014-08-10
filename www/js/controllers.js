@@ -10,6 +10,19 @@ angular.module('starter.controllers', [])
 })
 
 .controller('SettingCtrl', function($scope, $http, $ionicSlideBoxDelegate) {
+  var imgClass = function(){
+    var imgs = window.document.getElementsByTagName('img');
+    for(var i = 0; i < imgs.length; i++){
+      if (imgs[i].width > imgs[i].height){
+        imgs[i].className = 'img-box img-box-rotate';
+      }
+      else{
+        imgs[i].className = 'img-box'
+      }
+    }
+    console.dir(imgs);
+  }
+
   if (!window.localStorage['urls']){
     $scope.urls = {
       T1: 'http://img0.ph.126.net/om-IEVP2F1TRXQ2vj0RUUg==/6619460221444107243.jpg',
@@ -29,6 +42,7 @@ angular.module('starter.controllers', [])
   BaseUrl_5 = 'http://115.29.37.205:8080/5/'
   BaseUrl_2 = 'http://115.29.37.205:8080/2/'
   $scope.flip = false;
+  
   $scope.slideHasChanged = function(index) {
     console.log(index);
     if (index === 6){
@@ -41,6 +55,7 @@ angular.module('starter.controllers', [])
       window.localStorage['urlId'] = Number(window.localStorage['urlId']) + 5
       $scope.flip = true;
     }
+
     if (index === 1 && $scope.flip){
       $http.get(BaseUrl_2 + window.localStorage['urlId']).success(function(data){
         for(var key in data){
@@ -50,7 +65,9 @@ angular.module('starter.controllers', [])
       });
       window.localStorage['urlId'] = Number(window.localStorage['urlId']) + 2
       $scope.flip = false; 
+      
     }
+    imgClass();
     // T_index = (index + 1) % 3;
     // var T = document.getElementById('T' + String(T_index));
     // T.src = 'http://a.hiphotos.baidu.com/image/w%3D2048/sign=0572060839f33a879e6d071af2641038/55e736d12f2eb9384b1bffcad6628535e5dd6f90.jpg'
